@@ -3,14 +3,11 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react({
-    // Disable fast refresh in production
-    fastRefresh: process.env.NODE_ENV !== 'production'
-  })],
+  plugins: [react()],
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -19,13 +16,11 @@ export default defineConfig({
         }
       }
     },
-    // Make build less strict
     target: 'es2015',
     cssCodeSplit: true,
     assetsInlineLimit: 4096
   },
   esbuild: {
-    // Disable TypeScript type checking during build
     logOverride: { 'this-is-undefined-in-esm': 'silent' }
   },
   server: {
