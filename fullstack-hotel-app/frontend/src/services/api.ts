@@ -1,7 +1,10 @@
 import axios from 'axios';
 import { AuthTokens, User, UserCreate, UserUpdate } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://hotel-b-cancel-v1.onrender.com';
+// Use relative URL for production, direct URL for development
+const API_BASE_URL = import.meta.env.PROD 
+  ? '/api' 
+  : import.meta.env.VITE_API_URL || 'https://hotel-b-cancel-v1.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
