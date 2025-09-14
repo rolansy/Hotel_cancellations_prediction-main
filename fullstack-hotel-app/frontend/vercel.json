@@ -4,16 +4,7 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install --legacy-peer-deps",
-  "functions": {
-    "api/proxy.ts": {
-      "runtime": "@vercel/node@3"
-    }
-  },
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/proxy"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
