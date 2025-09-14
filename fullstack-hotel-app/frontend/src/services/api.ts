@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AuthTokens, User, UserCreate, UserUpdate } from '../types';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://hotel-b-cancel-v1.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
