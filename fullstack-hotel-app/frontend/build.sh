@@ -5,7 +5,7 @@ echo "🔨 Starting Vercel build process..."
 
 # Set environment variables for production
 export NODE_ENV=production
-export VITE_API_URL=${VITE_API_URL:-"https://hotel-b-cancel-v1.onrender.com"}
+export VITE_API_URL=${VITE_API_URL:-"https://hotel-b-cancel-v3.onrender.com"}
 
 echo "📦 Environment:"
 echo "NODE_ENV: $NODE_ENV"

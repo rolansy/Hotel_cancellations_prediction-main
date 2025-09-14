@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AuthTokens, User, UserCreate, UserUpdate } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://hotel-b-cancel-v1.onrender.com';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://hotel-b-cancel-v3.onrender.com';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
